@@ -3,7 +3,7 @@ using UnityEngine.UI;
 public class AppController : MonoBehaviour
 {
     [SerializeField] PanelUI mMainMenu;
-
+    [SerializeField] PanelUI mPanelCradle;
 
     [Space]
     [SerializeField] Button mShowButton;
@@ -26,6 +26,8 @@ public class AppController : MonoBehaviour
             mMainMenu.Enable(false);
             StartCoroutine(mFadeUI.FadeOutIn());
             mCamController.SetFreeLookCam();
+
+            mPanelCradle.Enable(true);
         });
     }
 

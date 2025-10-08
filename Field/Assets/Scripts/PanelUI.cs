@@ -21,10 +21,17 @@ public class PanelUI : MonoBehaviour
 
     public void Enable(bool enable)
     {
+        if(enable)
+            this.gameObject.SetActive(enable);
+
         transform.DOScale(enable ? Vector3.one : Vector3.zero, 1.0f).OnComplete(() =>
         {
             transform.DOShakeScale(shakeDuration, shakeStrength, vibrato, randomness, false)
-               .OnComplete(() => transform.localScale = enable?  originalScale : Vector3.zero); // Ensure it resets
+               .OnComplete(() => 
+               { 
+                   transform.localScale = enable ? originalScale : Vector3.zero;
+                   this.gameObject.SetActive(enable);
+               }); // Ensure it resets
         });
     }
 }
