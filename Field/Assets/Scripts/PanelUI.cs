@@ -24,7 +24,7 @@ public class PanelUI : MonoBehaviour
         transform.DOScale(enable ? Vector3.one : Vector3.zero, 1.0f).OnComplete(() =>
         {
             transform.DOShakeScale(shakeDuration, shakeStrength, vibrato, randomness, false)
-               .OnComplete(() => transform.localScale = originalScale); // Ensure it resets
+               .OnComplete(() => transform.localScale = enable?  originalScale : Vector3.zero); // Ensure it resets
         });
     }
 }

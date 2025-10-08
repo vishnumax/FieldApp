@@ -133,4 +133,10 @@ public class LookCam : MonoBehaviour
         transform.position = target.position;
     }
 
+
+    public void SetDrop(bool enable)
+    {
+        orbitCam.Priority = enable ? 20 : 10;
+    }
+
 }
