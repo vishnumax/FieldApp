@@ -1,0 +1,23 @@
+KR AGILUS
+Maximum payload
+6 kg
+Maximum reach
+706.7 mm
+Mounting position
+Floor, Ceiling, Wall, Desired angle
+Pose repeatability (ISO 9283)
+0.03 mm
+Controller
+KR C5 micro-2, KR C5 micro
+Number of axes
+6
+Ambient temperature during operation
+5 °C to 45 °C (278 K to 318 K)
+Ambient temperature during stor./transp.
+-40 °C to 60 °C (233 K to 333 K)
+Protection rating (IEC 60529)
+IP54
+Prot. rating, in-line wrist (IEC 60529)
+IP54
+Cleanroom class (ISO 14644-1)
+Class 2 at 40% override, Class 2 at 80% override
