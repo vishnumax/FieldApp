@@ -33,6 +33,14 @@ public class ThemeSelector : MonoBehaviour
         themObjs[0].SetActive(theme == Theme.def);
         themObjs[1].SetActive(theme == Theme.one);
         themObjs[2].SetActive(theme == Theme.two);
+
+        AppData.mCurrentAni = mTheme switch
+        {
+            Theme.def => themObjs[0].GetComponent<Animator>(),
+            Theme.one => themObjs[1].GetComponent<Animator>(),
+            Theme.two => themObjs[2].GetComponent<Animator>(),
+            _=> themObjs[0].GetComponent<Animator>(),
+        };
     }
 
 }

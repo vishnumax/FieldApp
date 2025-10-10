@@ -13,8 +13,20 @@ public class CamController : MonoBehaviour
 
     private void Start()
     {
-        cams.Find(x => x.GetCamDrop == CamDrop.BuildLand).SetDrop(true); ;
+        cams.Find(x => x.GetCamDrop == CamDrop.BuildLand).SetDrop(true); 
     }
+
+    public void SetHotSpot(CamDrop drop) 
+    {
+        foreach (var item in cams)
+        {
+            item.SetDrop(false);
+        }
+
+        freeLookCam.SetDrop(false);
+        cams.Find(x => x.GetCamDrop == drop).SetDrop(true);
+    }
+
 
     public void SetFreeLookCam()
     {

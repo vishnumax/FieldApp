@@ -26,5 +26,7 @@ public enum CamDrop
 {
     BuildTop,
     BuildLand,
-    Cradle
+    Cradle,
+    Robot,
+    BMU
 }
